@@ -8,6 +8,16 @@ body {
   font-size: 3.5vw;
 }
 
+li:hover {
+  background-color: bisque;
+  cursor: pointer;
+}
+
+li:active {
+  background-color: burlywood;
+  scale: 1.1;
+}
+
 ul li:last-child {
   background-color: #f5913e;
 }
@@ -18,16 +28,6 @@ ul li:last-child:hover {
 }
 
 ul li:last-child:active {
-  background-color: burlywood;
-  scale: 1.1;
-}
-
-li:hover {
-  background-color: bisque;
-  cursor: pointer;
-}
-
-li:active {
   background-color: burlywood;
   scale: 1.1;
 }
