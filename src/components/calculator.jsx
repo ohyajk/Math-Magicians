@@ -1,6 +1,9 @@
-function Calculator() {
-  return (
-    <div className="h-[100vh] flex justify-center items-center">
+import React, { Component } from 'react';
+
+export default class calculator extends Component {
+  render() {
+    return (
+      <div className="h-[100vh] flex justify-center items-center">
       <ul className="bg-[#e0e0e0] w-4/5 grid columns-6 border-2 border-black/40">
         <span className="p-2 text-right justify-self-end bg-[#858694] w-full text-white hover:bg-[#858694]">0</span>
         <ul className="flex justify-center items-center">
@@ -34,7 +37,6 @@ function Calculator() {
         </ul>
       </ul>
     </div>
-  );
+    );
+  }
 }
-
-export default Calculator;
