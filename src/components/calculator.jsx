@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import calculate from '../logic/calculate';
 // eslint-disable-next-line react/prefer-stateless-function
 export default class calculator extends Component {
   render() {
