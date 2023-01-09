@@ -1,12 +1,11 @@
-const App = () => {
-  const msg = 'Hail Tailwind CSS 🙌';
-  return (
-    <div>
-      <h1 className="text-3xl font-bold">
-        {msg}
-      </h1>
-    </div>
-  );
-};
+import React, { Component } from 'react';
 
-export default App;
+import Calculator from './components/calculator';
+// eslint-disable-next-line react/prefer-stateless-function
+export default class App extends Component {
+  render() {
+    return (
+      <Calculator />
+    );
+  }
+}
