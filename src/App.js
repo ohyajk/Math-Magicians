@@ -1,12 +1,9 @@
-const App = () => {
-  const msg = 'Hail Tailwind CSS 🙌';
+import Calculator from './components/calculator';
+
+function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">
-        {msg}
-      </h1>
-    </div>
+    <Calculator />
   );
-};
+}
 
 export default App;
