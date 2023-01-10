@@ -15,7 +15,6 @@ class calculator extends Component {
     const buttonName = e.currentTarget.textContent.trim();
     const obj = this.state;
     this.setState(calculate(obj, buttonName));
-    console.log(this.state);
   }
 
   render() {
