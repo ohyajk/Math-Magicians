@@ -1,72 +1,64 @@
-import { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import calculate from '../logic/calculate';
-// eslint-disable-next-line react/prefer-stateless-function
-class calculator extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      total: 0,
-      next: 0,
-      operation: '',
-    };
-    this.clickHandler = this.clickHandler.bind(this);
-  }
+const Calculator = () => {
+  const [state, calcState] = useState({
+    total: 0,
+    next: 0,
+    operation: '',
+  });
 
-  componentDidUpdate() {
-    const { total, next } = this.state;
-    const inputElm = document.querySelector('.result');
+  useEffect(() => {
+    const { total, next } = state;
+    const inputEl = document.querySelector('.result');
 
     if ((next != null)) {
-      inputElm.value = next;
+      inputEl.value = next;
     } else if (!Number.isNaN(total)) {
-      inputElm.value = total;
+      inputEl.value = total;
     }
+  }, [state]);
+
+  function clickHandler(e) {
+    calcState({ ...state, ...calculate(state, e.target.innerHTML) });
   }
 
-  clickHandler(e) {
-    const { total, next, operation } = this.state;
-    this.setState(calculate({ total, next, operation }, e.target.innerHTML));
-  }
-
-  render() {
-    return (
-      <div className="h-[100vh] flex justify-center items-center">
-        <ul className="bg-[#e0e0e0] w-4/5 grid columns-6 border-2 border-black/40">
-          <input className="p-2 text-right justify-self-end bg-[#858694] w-full text-white hover:bg-[#858694] placeholder:text-white result" placeholder="0" readOnly />
-          <ul className="flex justify-center items-center">
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>AC</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>+/-</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>%</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>÷</button></li>
-          </ul>
-          <ul className="flex justify-center items-center">
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>7</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>8</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>9</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>x</button></li>
-          </ul>
-          <ul className="flex justify-center items-center">
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>4</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>5</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>6</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>-</button></li>
-          </ul>
-          <ul className="flex justify-center items-center">
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>1</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>2</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>3</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>+</button></li>
-          </ul>
-          <ul className="flex justify-center items-center">
-            <li className="flex justify-center border-2 border-black/40 w-1/2"><button className="w-full" type="button" onClick={this.clickHandler}>0</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>.</button></li>
-            <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={this.clickHandler}>=</button></li>
-          </ul>
+  return (
+    <div className="h-[100vh] flex justify-center items-center">
+      <ul className="bg-[#e0e0e0] w-4/5 grid columns-6 border-2 border-black/40">
+        <input className="p-2 text-right justify-self-end bg-[#858694] w-full text-white hover:bg-[#858694] placeholder:text-white result" placeholder="0" readOnly />
+        <ul className="flex justify-center items-center">
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>AC</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>+/-</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>%</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>÷</button></li>
         </ul>
-      </div>
-    );
-  }
-}
+        <ul className="flex justify-center items-center">
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>7</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>8</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>9</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>x</button></li>
+        </ul>
+        <ul className="flex justify-center items-center">
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>4</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>5</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>6</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>-</button></li>
+        </ul>
+        <ul className="flex justify-center items-center">
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>1</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>2</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>3</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>+</button></li>
+        </ul>
+        <ul className="flex justify-center items-center">
+          <li className="flex justify-center border-2 border-black/40 w-1/2"><button className="w-full" type="button" onClick={clickHandler}>0</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>.</button></li>
+          <li className="flex justify-center border-2 border-black/40 w-1/4"><button className="w-full" type="button" onClick={clickHandler}>=</button></li>
+        </ul>
+      </ul>
+    </div>
+  );
+};
 
-export default calculator;
+export default Calculator;
