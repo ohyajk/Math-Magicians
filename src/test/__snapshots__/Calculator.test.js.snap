@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator snapshot renders correctly 1`] = `
+<div
+  className="col-span-2 p-8 w-full"
+>
+  <ul
+    className="bg-[#e0e0e0] grid h-[80vh] columns-6 border-2 border-black/40"
+  >
+    <input
+      className="p-2 text-right justify-self-end bg-[#858694] w-full text-white hover:bg-[#858694] placeholder:text-white result"
+      placeholder="0"
+      readOnly={true}
+    />
+    <ul
+      className="flex justify-center items-center"
+    >
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          AC
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          +/-
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          %
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          ÷
+        </button>
+      </li>
+    </ul>
+    <ul
+      className="flex justify-center items-center"
+    >
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          7
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          8
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          9
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          x
+        </button>
+      </li>
+    </ul>
+    <ul
+      className="flex justify-center items-center"
+    >
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          5
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          6
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          -
+        </button>
+      </li>
+    </ul>
+    <ul
+      className="flex justify-center items-center"
+    >
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          +
+        </button>
+      </li>
+    </ul>
+    <ul
+      className="flex justify-center items-center"
+    >
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/2"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          0
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          .
+        </button>
+      </li>
+      <li
+        className="h-full flex justify-center border-2 border-black/40 w-1/4"
+      >
+        <button
+          className="w-full"
+          onClick={[Function]}
+          type="button"
+        >
+          =
+        </button>
+      </li>
+    </ul>
+  </ul>
+</div>
+`;
