@@ -3,26 +3,25 @@ li {
 }
 
 li:hover {
-    background-color: bisque;
-    cursor: pointer;
-  }
-  
-  li:active {
-    background-color: burlywood;
-    scale: 1.1;
-  }
-  
-  ul li:last-child {
-    background-color: #f5913e;
-  }
-  
-  ul li:last-child:hover {
-    background-color: #fd831f;
-    cursor: pointer;
-  }
-  
-  ul li:last-child:active {
-    background-color: burlywood;
-    scale: 1.1;
-  }
-  
+  background-color: bisque;
+  cursor: pointer;
+}
+
+li:active {
+  background-color: burlywood;
+  scale: 1.1;
+}
+
+ul li:last-child {
+  background-color: #f5913e;
+}
+
+ul li:last-child:hover {
+  background-color: #fd831f;
+  cursor: pointer;
+}
+
+ul li:last-child:active {
+  background-color: burlywood;
+  scale: 1.1;
+}
