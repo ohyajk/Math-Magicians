@@ -129,7 +129,10 @@ Nothing required to install.
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
+👦 Aman Worku (Tests)
+
+👉GitHub: [@AmanWorku](https://github.com/AmanWorku)
+👉Email : amexworku2014@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
