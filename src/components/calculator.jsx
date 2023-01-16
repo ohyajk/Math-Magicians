@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import calculate from '../logic/calculate';
+import './Calculator.css';
 
 const Calculator = () => {
   const [state, calcState] = useState({
@@ -25,6 +27,7 @@ const Calculator = () => {
 
   return (
     <div className="h-[100vh] flex justify-center items-center">
+      <Link to="/about" className="text-white">Go to About page...</Link>
       <ul className="bg-[#e0e0e0] w-4/5 grid columns-6 border-2 border-black/40">
         <input className="p-2 text-right justify-self-end bg-[#858694] w-full text-white hover:bg-[#858694] placeholder:text-white result" placeholder="0" readOnly />
         <ul className="flex justify-center items-center">
