@@ -1,3 +1,7 @@
+li {
+  color: black;
+}
+
 li:hover {
     background-color: bisque;
     cursor: pointer;
