@@ -69,11 +69,11 @@ REQUIRED SECTIONS:
 
 <!-- LIVE DEMO -->
 
-## 🚀 https://math-magicians-zyy8.onrender.com/
+## 🚀 Live Demo
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](http://ohyajk.me/Math-Magicians/)
+- [Live Demo Link]([http://ohyajk.me/Math-Magicians/](https://math-magicians-zyy8.onrender.com/))
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
