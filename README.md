@@ -69,7 +69,7 @@ REQUIRED SECTIONS:
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 https://math-magicians-zyy8.onrender.com/
 
 > Add a link to your deployed project.
 
